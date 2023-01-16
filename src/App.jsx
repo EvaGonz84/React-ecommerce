@@ -1,11 +1,18 @@
-import React from 'react'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import NotFoundPage from "./pages/NotFoundPage";
+import ProductPage from "./pages/ProductPage";
 
 const App = () => {
   return (
-    <>
-    <h1 className='text-center'>Ecommerce React & Tailwind</h1>
-    </>
-  )
-}
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/product" element={<ProductPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;
