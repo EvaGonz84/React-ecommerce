@@ -30,7 +30,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <header className="container flex items-center mx-auto gap-10 p-10 text-2xl">
+      <header className="container flex items-center mx-auto gap-10 p-2 text-2xl bg-grey">
         <button onClick={handleOpenMenu} className="md:hidden">
           <FaBars />
         </button>
