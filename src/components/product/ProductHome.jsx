@@ -14,7 +14,7 @@ const ProductHome = () => {
           voluptas nesciunt ut quo consectetur beatae accusantium, tempora
           laboriosam consequatur."
         />
-        <article className="flex flex-col md:flex-row justify-center items-center text-center gap-10 my-20">
+        <article id='info-product' className="flex flex-col md:flex-row justify-center items-center text-center gap-10 mb-20">
           <div className="aspect-[16/9] md:w-1/2">
             <img src={imgProduct1} alt="bread-image" />
           </div>
@@ -28,7 +28,7 @@ const ProductHome = () => {
             </Link>
           </div>
         </article>
-        <article className="flex flex-col md:flex-row-reverse justify-center items-center text-center gap-6 my-20">
+        <article className="flex flex-col md:flex-row-reverse justify-center items-center text-center gap-6">
           <div className="aspect-[16/9] md:w-1/2">
             <img src={imgProduct2} alt="bread-image" />
           </div>
@@ -40,7 +40,7 @@ const ProductHome = () => {
             <Button text="Contáctanos" />
           </div>
         </article>
-        <TextProductHome text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable." />
+        <TextProductHome text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua' />
       </section>
     </>
   );

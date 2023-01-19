@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.img-home {
+    background-image: linear-gradient(rgba(255,255,255, 0.5), rgba(255,255,255, 0.5)),
+    url('./assets/images/bread-6.jpg');
+
+}
+
+.scroll-arrow {
+    font-size: 40px;
+    margin-top: 40px;
+    cursor: pointer;
+}
