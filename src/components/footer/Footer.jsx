@@ -12,7 +12,7 @@ const Footer = () => {
           <p>{`Copyright © company ${year}`}</p>
         </div>
         {/*Social media links*/}
-        <div className="flex gap-4">
+        <div className="flex gap-4 cursor-pointer">
            <FaInstagram/> 
            <FaFacebook/>
         </div>
