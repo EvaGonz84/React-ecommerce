@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Footer from "./components/footer/Footer";
 import Navbar from "./components/header/Navbar";
 import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
@@ -13,6 +14,7 @@ const App = () => {
         <Route path="/product" element={<ProductPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 };
