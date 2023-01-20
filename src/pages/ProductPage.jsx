@@ -1,6 +1,6 @@
 import ProductDetails from "../components/product/ProductDetails";
 import TextProductHome from "../components/product/TextProductHome";
-import SliderProduct from "./SliderProduct";
+import SliderProduct from '../components/product/SliderProduct';
 
 const ProductPage = () => {
   return (

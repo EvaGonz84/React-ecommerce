@@ -1,5 +1,5 @@
-import imgProduct1 from "../../assets/images/bread-8.jpg";
-import imgProduct2 from "../../assets/images/bread-7.jpg";
+import imgProduct1 from "../../assets/images/bread-10.jpg";
+import imgProduct2 from "../../assets/images/bread-11.jpg";
 import Button from "../button/Button";
 import { Link } from "react-router-dom";
 import TextProductHome from "./TextProductHome";
