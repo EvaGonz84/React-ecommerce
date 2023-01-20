@@ -5,9 +5,6 @@ module.exports = {
 
   theme: {
     extend: {
-      backgroundImage: {
-        "bread-home": "url('./src/assets/images/bread-6.jpg')",
-      },
       fontFamily: {
         sans: ["Roboto", ...defaultTheme.fontFamily.sans],
       },

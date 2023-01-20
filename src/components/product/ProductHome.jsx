@@ -14,7 +14,10 @@ const ProductHome = () => {
           voluptas nesciunt ut quo consectetur beatae accusantium, tempora
           laboriosam consequatur."
         />
-        <article id='info-product' className="flex flex-col md:flex-row justify-center items-center text-center gap-10 mb-20">
+        <article
+          id="info-product"
+          className="flex flex-col md:flex-row justify-center items-center text-center gap-10 mb-20"
+        >
           <div className="aspect-[16/9] md:w-1/2">
             <img src={imgProduct1} alt="bread-image" />
           </div>
@@ -24,7 +27,7 @@ const ProductHome = () => {
               Temporibus deleniti beatae quos officia eos.
             </p>
             <Link to="/product">
-              <Button text="Ver producto" />
+              <Button text="Product" />
             </Link>
           </div>
         </article>
@@ -37,10 +40,12 @@ const ProductHome = () => {
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Temporibus deleniti beatae quos officia eos.
             </p>
-            <Button text="Contáctanos" />
+            <Link to="/product">
+              <Button text="Product" />
+            </Link>
           </div>
         </article>
-        <TextProductHome text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua' />
+        <TextProductHome text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua" />
       </section>
     </>
   );
