@@ -21,8 +21,8 @@ const ProductHome = () => {
           <div className="aspect-[16/9] md:w-1/2">
             <img src={imgProduct1} alt="bread-image" />
           </div>
-          <div className="flex flex-col justify-center items-center gap-8  md:w-1/2 md:items-start">
-            <p className="text-2xl text-center  tracking-wider leading-normal md:text-start">
+          <div className="flex flex-col justify-center items-center gap-8 md:w-1/2 md:items-start">
+            <p className="text-xl font-semibold text-center tracking-wider leading-normal md:text-2xl only:md:text-start">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Temporibus deleniti beatae quos officia eos.
             </p>
@@ -35,8 +35,8 @@ const ProductHome = () => {
           <div className="aspect-[16/9] md:w-1/2">
             <img src={imgProduct2} alt="bread-image" />
           </div>
-          <div className="flex flex-col justify-center items-center gap-4 md:items-start md:w-1/2">
-            <p className="text-2xl text-center  tracking-wider trleading-normal md:text-start">
+          <div className="flex flex-col justify-center items-center gap-8 md:items-start md:w-1/2">
+            <p className="text-xl font-semibold text-center tracking-wider leading-normal md:text-2xl md:text-start">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Temporibus deleniti beatae quos officia eos.
             </p>
@@ -45,7 +45,7 @@ const ProductHome = () => {
             </Link>
           </div>
         </article>
-        <TextProductHome text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua" />
+        <TextProductHome text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
       </section>
     </>
   );
