@@ -42,7 +42,7 @@ If the state is equal to the index of the last element, it returns to the first 
           <img
             src={arrayImgs[index]}
             alt="bread-image"
-            className="aspect-[16/12]"
+            className="aspect-[16/12] w-full object-cover md:aspect-[16/16] md:rounded-md xl:aspect-[16/14] xl:max-h-[500px]"
           />
           <div className="absolute top-1/2 left-0 flex w-full -translate-y-1/2 justify-between px-4">
             <button
@@ -63,14 +63,19 @@ If the state is equal to the index of the last element, it returns to the first 
         {arrayImgsSmall.map((item, i) => {
           return (
             <img
+              onClick={() => setIndex(i)}
               key={i}
               src={item}
               alt="bread-image"
-              className="hidden md:block"
+              /*when state and index match the image becomes opaque */
+              className={
+                index === i
+                  ? "focus: hidden cursor-pointer opacity-60 md:block md:rounded-md"
+                  : "focus: hidden cursor-pointer hover:opacity-60 md:block md:rounded-md"
+              }
             />
           );
         })}
-        ;
       </article>
     </>
   );

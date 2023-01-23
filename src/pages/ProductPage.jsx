@@ -1,11 +1,11 @@
 import ProductDetails from "../components/product/ProductDetails";
 import TextProductHome from "../components/product/TextProductHome";
-import SliderProduct from '../components/product/SliderProduct';
+import SliderProduct from "../components/product/SliderProduct";
 
 const ProductPage = () => {
   return (
     <main>
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 w-[90%] md:w-[80%] mx-auto">
         <SliderProduct />
         <ProductDetails />
       </section>
