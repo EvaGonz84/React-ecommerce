@@ -4,17 +4,19 @@ import Navbar from "./components/header/Navbar";
 import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ProductPage from "./pages/ProductPage";
-
+import CartDetailsProvider from "./context/useCartDetails";
 const App = () => {
   return (
     <BrowserRouter>
-    <Navbar/>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/product" element={<ProductPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-      <Footer/>
+      <CartDetailsProvider>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/product" element={<ProductPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+        <Footer />
+      </CartDetailsProvider>
     </BrowserRouter>
   );
 };
