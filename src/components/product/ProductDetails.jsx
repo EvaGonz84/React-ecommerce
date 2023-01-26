@@ -33,7 +33,7 @@ const ProductDetails = ({ objectProduct }) => {
         <p className="text-xl">{objectProduct.description}</p>
         <div>
           <span className="text-2xl md:text-3xl font-bold">
-            ${objectProduct.price}
+            {objectProduct.price}€
           </span>
         </div>
         <div className="flex flex-col md:flex-row gap-6 md:gap-8 text-lg">
@@ -45,7 +45,7 @@ const ProductDetails = ({ objectProduct }) => {
           {/*The product is the parameter of the function to be added. */}
           <button
             onClick={handleAddToCart}
-            className="bg-black hover:bg-white hover:text-black hover:border-2 hover:border-black transition-all duration-300 text-white rounded-md md:w-1/3"
+            className="bg-black hover:bg-white hover:text-black hover:border-2 hover:border-black transition-all duration-300 text-white rounded-md p-2 md:p-0 md:w-1/3"
           >
             Add to cart
           </button>

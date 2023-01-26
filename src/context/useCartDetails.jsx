@@ -6,8 +6,8 @@ export default ({ children }) => {
   const [cartProducts, setCartProducts] = useState([]);
 
   const addCartProducts = (product) => {
-    //If the array is empty it is added to the product
-    if (cartProducts.length === 0) {
+    //If the array is empty & quantity is 0 it is added to the product
+    if (cartProducts.length === 0 && product.quantity > 0) {
       return setCartProducts([...cartProducts, product]);
     }
     //Checks if the product matches the id and adds the quantity to it
@@ -21,11 +21,23 @@ export default ({ children }) => {
       })
     );
   };
-  const deleteCartProducts = () => {};
+  const deleteCartProducts = () => {
+    setCartProducts([]);
+  };
+
+  const totalQuantityProducts = cartProducts.reduce(
+    (total, current) => total + current.price * current.quantity,
+    0
+  );
 
   return (
     <useCartDetails.Provider
-      value={{ cartProducts, addCartProducts, deleteCartProducts }}
+      value={{
+        cartProducts,
+        addCartProducts,
+        deleteCartProducts,
+        totalQuantityProducts,
+      }}
     >
       {children}
     </useCartDetails.Provider>

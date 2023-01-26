@@ -16,7 +16,7 @@ const objectProduct = {
 const ProductPage = () => {
   return (
     <main>
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 w-[90%] md:w-[80%] mx-auto pt-10">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 w-[90%] md:w-[80%] mx-auto pt-2">
         <SliderProduct
           images={objectProduct.images}
           smallImages={objectProduct.smallImages}

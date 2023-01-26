@@ -33,7 +33,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <header className="container flex items-center mx-auto gap-10 p-2 text-2xl bg-grey">
+      <header className="container flex items-center mx-auto gap-10 px-6 py-4 md:px-2 text-2xl bg-grey">
         <button onClick={handleOpenMenu} className="md:hidden">
           <FaBars />
         </button>
@@ -48,8 +48,11 @@ const Navbar = () => {
           <NavLink closeMenu={handleCloseMenu} textProduct="Product" />
         </nav>
         <div>
-          <button onClick={() => setOpenCartDetails(!openCartDetails)} className="pt-2">
-            <FaShoppingCart />
+          <button
+            onClick={() => setOpenCartDetails(!openCartDetails)}
+            className="pt-2"
+          >
+            <FaShoppingCart className="hover:fill-yellow-600" />
           </button>
           {/*the state changes on the onclick and the component appears */}
           {openCartDetails && <CartDetails />}

@@ -2,36 +2,47 @@ import { useContext } from "react";
 import { FaTrashAlt } from "react-icons/fa";
 import { useCartDetails } from "../../context/useCartDetails";
 const CartDetails = () => {
-  const { cartProducts } = useContext(useCartDetails);
+  const { cartProducts, deleteCartProducts, totalQuantityProducts } =
+    useContext(useCartDetails);
+
   return (
-    <section className="absolute top-[100px] left-0 z-10 w-full md:left-[95%] md:max-w-2xl md:-translate-x-full">
-      <div className="mx-8 rounded-md bg-white md:mx-8">
-        <h4 className="px-4 py-6 text-lg font-semibold">Cart</h4>
+    <section className="absolute top-[100px] left-0 z-10 w-[95%] ml-2 bg-white md:left-[95%] md:max-w-2xl md:-translate-x-full border-2 border-[#e5e7eb] rounded-md">
+      <div className="mx-8 rounded-md md:mx-8">
+        <h1 className="px-4 py-6 text-xl font-semibold">Cart</h1>
         <hr />
         {cartProducts.length === 0 && (
-          <p className="py-8 text-center">Your cart is empty</p>
+          <p className="py-8 text-lg font-semibold text-center">
+            Your cart is empty
+          </p>
         )}
 
         {cartProducts.map((product) => {
           return (
-            <article className="grid grid-cols-[1fr_4fr_1fr] items-center gap-8 px-6 py-8 text-lg">
+            <article
+              key={product.id}
+              className="grid grid-cols-[1fr_4fr_1fr] items-center gap-8 px-6 py-8 text-lg"
+            >
               <img
-                key={product.id}
                 src={product.img}
                 className="rounded-md"
                 alt="bread-image"
               ></img>
               <div>
-                <p>{product.title}</p>
-                <div>
+                <p className="font-semibold">{product.title}</p>
+                <div className="flex justify-between">
                   <span>
-                    ${product.price}x{product.quantity}
+                    {product.price}€ x {product.quantity}
                   </span>
-                  <span className="font-semibold">${product.total}</span>
+                  <span className="font-semibold">
+                    Total {totalQuantityProducts}€
+                  </span>
                 </div>
               </div>
               <button className="ml-auto">
-                <FaTrashAlt className="hover:fill-yellow-600" />
+                <FaTrashAlt
+                  onClick={deleteCartProducts}
+                  className="hover:fill-yellow-600"
+                />
               </button>
             </article>
           );

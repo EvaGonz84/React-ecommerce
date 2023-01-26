@@ -1,11 +1,7 @@
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import { useState } from "react";
 
-
-
-
-
-const SliderProduct = ({images, smallImages}) => {
+const SliderProduct = ({ images, smallImages }) => {
   const [index, setIndex] = useState(0);
 
   {
@@ -32,16 +28,16 @@ If the state is equal to the index of the last element, it returns to the first 
             alt="bread-image"
             className="aspect-[16/12] w-full object-cover md:aspect-[16/16] md:rounded-md xl:aspect-[16/14] xl:max-h-[500px]"
           />
-          <div className="absolute top-1/2 left-0 flex w-full -translate-y-1/2 justify-between px-4">
+          <div className="absolute top-1/2 left-0 flex w-full -translate-y-1/2 justify-between px-1">
             <button
               onClick={handleClickPrev}
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-white"
+              className="flex h-5 w-5 md:h-10 md:w-10 items-center justify-center rounded-full bg-white"
             >
               <FaAngleLeft />
             </button>
             <button
               onClick={handleClickNext}
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-white"
+              className="flex  h-5 w-5 md:h-10 md:w-10 items-center justify-center rounded-full bg-white"
             >
               <FaAngleRight />
             </button>
