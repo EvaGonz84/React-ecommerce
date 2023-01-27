@@ -15,7 +15,9 @@ const HomePage = () => {
           <NavLink to="/product">
             <Button text="Product"></Button>
           </NavLink>
-          <Button text="Contact"></Button>
+          <NavLink to="/contact">
+            <Button text="Contact"></Button>
+          </NavLink>
         </div>
         <Link
           to="info-product"

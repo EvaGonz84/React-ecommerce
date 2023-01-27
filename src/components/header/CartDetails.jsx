@@ -31,10 +31,10 @@ const CartDetails = () => {
                 <p className="font-semibold">{product.title}</p>
                 <div className="flex justify-between">
                   <span>
-                    {product.price}€ x {product.quantity}
+                    {product.price}€ x {totalQuantityProducts} {}
                   </span>
                   <span className="font-semibold">
-                    Total {totalQuantityProducts}€
+                    Total {product.price * totalQuantityProducts}€
                   </span>
                 </div>
               </div>

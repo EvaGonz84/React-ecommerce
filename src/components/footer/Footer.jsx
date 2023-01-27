@@ -1,4 +1,4 @@
-import { FaInstagram ,FaFacebook } from "react-icons/fa";
+import { FaInstagram, FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
   {
@@ -9,12 +9,12 @@ const Footer = () => {
     <>
       <footer className="flex flex-col justify-center items-center bg-yellow-600 tracking-wider trleading-normal text-xl font-semibold gap-4 p-10">
         <div>
-          <p>{`Copyright © company ${year}`}</p>
+          <p className="text-center">{`Copyright © company ${year}`}</p>
         </div>
         {/*Social media links*/}
         <div className="flex gap-4 cursor-pointer">
-           <FaInstagram/> 
-           <FaFacebook/>
+          <FaInstagram />
+          <FaFacebook />
         </div>
       </footer>
     </>

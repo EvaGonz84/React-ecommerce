@@ -3,8 +3,11 @@ import { FaBars, FaShoppingCart, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import NavLink from "./NavLink";
 import CartDetails from "./CartDetails";
+import { useCartDetails } from "../../context/useCartDetails";
+import { useContext } from "react";
 
 const Navbar = () => {
+  const { totalQuantityProducts } = useContext(useCartDetails);
   {
     /*initial state with classes for md & mobile devices*/
   }
@@ -46,13 +49,17 @@ const Navbar = () => {
           </button>
           <NavLink closeMenu={handleCloseMenu} textHome="Home" />
           <NavLink closeMenu={handleCloseMenu} textProduct="Product" />
+          <NavLink closeMenu={handleCloseMenu} textContact="Contact" />
         </nav>
         <div>
           <button
             onClick={() => setOpenCartDetails(!openCartDetails)}
-            className="pt-2"
+            className="relative mr-10"
           >
-            <FaShoppingCart className="hover:fill-yellow-600" />
+            <FaShoppingCart />
+            <span className="absolute top-0 left-3 -translate-y-2 rounded-md bg-yellow-600 px-1 text-xs font-bold text-white">
+              {totalQuantityProducts}
+            </span>
           </button>
           {/*the state changes on the onclick and the component appears */}
           {openCartDetails && <CartDetails />}

@@ -25,10 +25,7 @@ export default ({ children }) => {
     setCartProducts([]);
   };
 
-  const totalQuantityProducts = cartProducts.reduce(
-    (total, current) => total + current.price * current.quantity,
-    0
-  );
+  const totalQuantityProducts = cartProducts.reduce((total, current) => total + current.quantity, 0);
 
   return (
     <useCartDetails.Provider

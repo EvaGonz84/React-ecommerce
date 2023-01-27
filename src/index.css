@@ -12,3 +12,9 @@
     font-size: 40px;
     cursor: pointer;
 }
+
+.img-contact {
+    background-image: linear-gradient(rgba(255,255,255, 0.5), rgba(255,255,255, 0.5)),
+    url('./assets/images/bread-7.jpg');
+
+}
