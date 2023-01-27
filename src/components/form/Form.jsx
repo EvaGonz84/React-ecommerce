@@ -1,6 +1,10 @@
 const Form = () => {
+  const handleClickForm = (e) => {
+    e.preventDefault();
+    console.log("ok");
+  };
   return (
-    <form className="flex flex-col gap-8 w-[50%] mx-auto py-4 md:py-14">
+    <form className="flex flex-col gap-8 w-[85%] md:w-[50%] mx-auto py-4 md:py-14">
       <input
         className="bg-white p-2 tracking-wider"
         type="text"
@@ -20,7 +24,11 @@ const Form = () => {
         className="bg-white p-2 h-40 tracking-wider"
         placeholder="Message"
       ></textarea>
-      <button className="bg-yellow-600 hover:bg-yellow-500 p-4 rounded-md tracking-wider">
+      <button
+        onClick={handleClickForm}
+        type="submit"
+        className="bg-yellow-600 hover:bg-yellow-500 p-4 rounded-md tracking-wider"
+      >
         Send
       </button>
     </form>

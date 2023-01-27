@@ -26,7 +26,7 @@ const ProductDetails = ({ objectProduct }) => {
   };
   return (
     <>
-      <article className="flex flex-col justify-center gap-4 text-xl font-semibold tracking-wider leading-normal md:text-2xl">
+      <article className="flex flex-col justify-center gap-4 text-xl tracking-wider leading-normal md:text-2xl">
         <h2 className="uppercase text-yellow-600 text-2xl md:text-3xl">
           {objectProduct.title}
         </h2>

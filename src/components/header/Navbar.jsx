@@ -40,11 +40,11 @@ const Navbar = () => {
         <button onClick={handleOpenMenu} className="md:hidden">
           <FaBars />
         </button>
-        <Link to="/" className="mr-auto md:mr-0" href="#" alt="company-logo">
+        <Link to="/" className="mr-auto md:mr-0" alt="company-logo">
           LOGO
         </Link>
         <nav className={navClass}>
-          <button onClick={handleCloseMenu} className="mb-16 md:hidden">
+          <button onClick={handleCloseMenu} className="mb-10 md:hidden">
             <FaTimes />
           </button>
           <NavLink closeMenu={handleCloseMenu} textHome="Home" />
@@ -54,7 +54,7 @@ const Navbar = () => {
         <div>
           <button
             onClick={() => setOpenCartDetails(!openCartDetails)}
-            className="relative mr-10"
+            className="relative"
           >
             <FaShoppingCart />
             <span className="absolute top-0 left-3 -translate-y-2 rounded-md bg-yellow-600 px-1 text-xs font-bold text-white">
