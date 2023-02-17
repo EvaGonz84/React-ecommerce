@@ -7,7 +7,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <>
-      <footer className="flex flex-col justify-center items-center bg-yellow-600 tracking-wider trleading-normal text-xl font-semibold gap-4 p-10">
+      <footer className="flex flex-col justify-center items-center bg-yellow-600 tracking-wider leading-normal text-xl font-semibold gap-4 p-10">
         <div>
           <p className="text-center">{`Copyright © company ${year}`}</p>
         </div>

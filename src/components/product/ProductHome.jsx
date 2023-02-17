@@ -8,12 +8,7 @@ const ProductHome = () => {
   return (
     <>
       <section className="w-[90%] md:w-[80%] mx-auto">
-        <TextProductHome
-          text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero porro
-          velit, iste veniam praesentium voluptates? Minima fugit explicabo
-          voluptas nesciunt ut quo consectetur beatae accusantium, tempora
-          laboriosam consequatur."
-        />
+        <TextProductHome text="Get ready to experience the freshest, tastiest sourdough bread you've ever had!Our handcrafted loaves are made with the finest ingredients and slow-fermented for maximum flavor.If you want to know more, please contact us." />
         <article
           id="info-product"
           className="flex flex-col md:flex-row justify-center items-center text-center gap-10 pb-10"
@@ -23,8 +18,7 @@ const ProductHome = () => {
           </div>
           <div className="flex flex-col justify-center items-center gap-8 md:w-1/2 md:items-start">
             <p className="text-xl text-center tracking-wider leading-normal md:text-2xl md:text-start">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Temporibus deleniti beatae quos officia eos.
+            With its unique taste and texture, it's a delicious treat for breakfast, lunch or dinner and perfect for those who want to eat healthy! 
             </p>
             <Link to="/product">
               <Button text="Product" />
@@ -37,15 +31,17 @@ const ProductHome = () => {
           </div>
           <div className="flex flex-col justify-center items-center gap-8 md:items-start md:w-1/2">
             <p className="text-xl text-center tracking-wider leading-normal md:text-2xl md:text-start">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Temporibus deleniti beatae quos officia eos.
+              Enjoy the unique texture and freshness of our artisanal sourdough bread, you won't find anything else like it!
             </p>
             <Link to="/product">
               <Button text="Product" />
             </Link>
           </div>
         </article>
-        <TextProductHome text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+        <TextProductHome
+          text="Our artisanal sourdough bread is made from all-natural, organic ingredients.
+          If you want to know more about our ingredients, please contact us."
+        />
       </section>
     </>
   );

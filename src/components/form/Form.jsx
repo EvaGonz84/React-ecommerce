@@ -4,9 +4,13 @@ const Form = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+    reset();
+  };
 
   return (
     <form
@@ -14,7 +18,11 @@ const Form = () => {
       className="flex flex-col gap-6 w-[85%] md:w-[50%] mx-auto py-4 md:py-14"
     >
       <input
-        className="bg-white p-2 tracking-wider"
+        className={
+          errors.firstName
+            ? "bg-white p-2 tracking-wider border border-red-600 focus:outline-red-600"
+            : "bg-white p-2 tracking-wider"
+        }
         type="text"
         placeholder="First Name"
         {...register("firstName", {
@@ -29,15 +37,19 @@ const Form = () => {
         })}
       />
       {errors.firstName && (
-        <div className="flex justify-start">
-          <span className=" text-red-600 font-bold">
+        <div className="flex mt-[-15px]">
+          <span className="text-red-600 font-bold">
             {errors.firstName.message}
           </span>
         </div>
       )}
 
       <input
-        className="bg-white p-2 tracking-wider"
+        className={
+          errors.lastName
+            ? "bg-white p-2 tracking-wider border border-red-600 focus:outline-red-600"
+            : "bg-white p-2 tracking-wider"
+        }
         type="text"
         placeholder="Last Name"
         {...register("lastName", {
@@ -52,14 +64,18 @@ const Form = () => {
         })}
       />
       {errors.lastName && (
-        <div className="flex justify-start">
+        <div className="flex mt-[-15px]">
           <span className=" text-red-600 font-bold">
             {errors.lastName.message}
           </span>
         </div>
       )}
       <input
-        className="bg-white p-2 tracking-wider"
+        className={
+          errors.email
+            ? "bg-white p-2 tracking-wider border border-red-600 focus:outline-red-600"
+            : "bg-white p-2 tracking-wider"
+        }
         type="text"
         placeholder="Email"
         {...register("email", {
@@ -74,7 +90,7 @@ const Form = () => {
         })}
       />
       {errors.email && (
-        <div className="flex justify-start">
+        <div className="flex mt-[-15px]">
           <span className=" text-red-600 font-bold">
             {errors.email.message}
           </span>
@@ -82,7 +98,11 @@ const Form = () => {
       )}
 
       <textarea
-        className="bg-white p-2 h-40 tracking-wider"
+        className={
+          errors.message
+            ? "bg-white p-2 tracking-wider border border-red-600 focus:outline-red-600"
+            : "bg-white p-2 tracking-wider"
+        }
         placeholder="Message"
         {...register("message", {
           required: {
@@ -92,7 +112,7 @@ const Form = () => {
         })}
       ></textarea>
       {errors.message && (
-        <div className="flex justify-start">
+        <div className="flex mt-[-15px]">
           <span className=" text-red-600 font-bold">
             {errors.message.message}
           </span>

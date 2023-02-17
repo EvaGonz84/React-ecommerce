@@ -5,6 +5,7 @@ import NavLink from "./NavLink";
 import CartDetails from "./CartDetails";
 import { useCartDetails } from "../../context/useCartDetails";
 import { useContext } from "react";
+import { FaBreadSlice } from "react-icons/fa";
 
 const Navbar = () => {
   const { totalQuantityProducts } = useContext(useCartDetails);
@@ -41,7 +42,7 @@ const Navbar = () => {
           <FaBars />
         </button>
         <Link to="/" className="mr-auto md:mr-0" alt="company-logo">
-          LOGO
+          <FaBreadSlice className="fill-yellow-600 text" />
         </Link>
         <nav className={navClass}>
           <button onClick={handleCloseMenu} className="mb-10 md:hidden">
