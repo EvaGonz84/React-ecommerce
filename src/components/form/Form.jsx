@@ -6,7 +6,9 @@ const Form = () => {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    mode: "all",
+  });
   const onSubmit = (data) => {
     console.log(data);
     reset();

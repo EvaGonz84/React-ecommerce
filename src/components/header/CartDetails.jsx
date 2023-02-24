@@ -20,7 +20,7 @@ const CartDetails = () => {
           return (
             <article
               key={product.id}
-              className="grid grid-cols-[1fr_4fr_1fr] items-center gap-8 px-6 py-8 text-lg"
+              className="grid grid-cols-[2fr_5fr_1fr] items-center md:gap-8 md:px-6 py-8 text-lg px-2 gap-6"
             >
               <img
                 src={product.img}
